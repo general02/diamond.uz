@@ -3,8 +3,9 @@
 @import 'files/mixins.scss';
 @import 'files/media.scss';
 @import 'files/classes.scss';
-
-
+body {
+  background-color: #e5e5e5;
+}
 
 .container {
   width: 100%;
@@ -18,7 +19,9 @@
 }
 
 //=================Header================//
-
+header {
+  background-color: #fff;
+}
 .header {
 
   &-nav {
@@ -85,7 +88,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  margin-bottom: 13px;
+  padding-bottom: 13px;
 }
 
 
@@ -208,5 +211,57 @@
   &-info-item {
     display: flex;
     align-items: center;
+  }
+}
+
+
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &-price {
+    @include fontAll(16px, 400, 'Monserrat');
+    color: $main-col;
+  }
+  &-sale {
+    @include fontAll(12px, 400, 'Monserrat');
+    color: $gray-col;
+    text-decoration: line-through;
+    margin-top: 25px;
+  }
+  h5 {
+    @include fontAll(16px, 400, 'Monserrat');
+    color: $black-col;
+    margin-top: 30px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 77px;
+      height: 1px;
+      background-color: $main-col;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-img {
+    @include fixImg(156px, 161px, false);
+    margin: 0 auto;
+  }
+  &-item {
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @extend %transition;
+    cursor: pointer;
+    &:hover {
+      z-index: 2;
+      box-shadow: 7px 5px 40px rgba($color: #000000, $alpha: 0.3);
+    }
   }
 }

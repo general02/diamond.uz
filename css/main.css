@@ -18,7 +18,7 @@
   font-family: 'Montserrat';
   src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400; }
-.btn-purp, .header-nav-item a, .trand-product img {
+.btn-purp, .header-nav-item a, .trand-product img, .products-item {
   transition: all 0.4s linear;
   -webkit-transition: all 0.4s linear;
   -ms-transition: all 0.4s linear;
@@ -62,7 +62,9 @@ select:focus {
   border: 2px solid #b777be;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em; }
   .btn-purp:hover {
     background: linear-gradient(265.97deg, #b777be -30%, #88488f 80%); }
   .btn-purp svg {
@@ -217,6 +219,9 @@ align-content-between {
   -ms-flex-direction: column-reverse !important;
   flex-direction: column-reverse !important; }
 
+body {
+  background-color: #e5e5e5; }
+
 .container {
   width: 100%;
   padding-left: 20px;
@@ -229,11 +234,14 @@ align-content-between {
   font-weight: 500;
   font-family: "CG"; }
 
+header {
+  background-color: #fff; }
+
 .header {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 13px; }
+  padding-bottom: 13px; }
   .header-nav-item a {
     font-size: 13px;
     font-weight: 400;
@@ -377,5 +385,58 @@ align-content-between {
 .diamond-info-item {
   display: flex;
   align-items: center; }
+
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .products-price {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Monserrat";
+    color: #b777be; }
+  .products-sale {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Monserrat";
+    color: #6A6A6A;
+    text-decoration: line-through;
+    margin-top: 25px; }
+  .products h5 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Monserrat";
+    color: #000000;
+    margin-top: 30px;
+    position: relative; }
+    .products h5::after {
+      content: '';
+      width: 77px;
+      height: 1px;
+      background-color: #b777be;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%); }
+  .products-img {
+    width: 156px;
+    height: 161px;
+    margin: 0 auto; }
+    .products-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  .products-item {
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer; }
+    .products-item:hover {
+      z-index: 2;
+      box-shadow: 7px 5px 40px rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=main.css.map */
